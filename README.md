@@ -8,3 +8,4 @@
 ## Changelog
 
 - v1.0 (31.10.2026): Erste Fassung mit Hamburg-Design (Arial), GoatCounter-Zähler und Link "Informationsseiten des Tuberkulosezentrums".
+- v1.1 (31.10.2026): `index.html` als Weiterleitung auf `tb-statistik.html` ergänzt, damit GitHub Pages im Hauptverzeichnis das Dashboard öffnet.
