@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tuberkulose in Hamburg 2017–2025 – Tuberkulose-Zentrum Hamburg</title>
-<meta name="description" content="Interaktive Kurzstatistik zur Tuberkulose in Hamburg 2017–2025: Fallzahlen, Inzidenz, Alter, Geburtsland, betroffene Organe, Infektiosität, Resistenz und Behandlungsergebnisse.">
+<meta name="description" content="Interaktive Kurzstatistik zur Tuberkulose in Hamburg 2017–2025: Fallzahlen, Inzidenz, Alter, betroffene Organe, Infektiosität, Resistenz und Behandlungsergebnisse.">
 <style>
 :root{
   --blue:#003063; --blue2:#0b5cab; --blue3:#9dc3e6; --red:#e10019; --ink:#1b2430; --muted:#566275;
@@ -103,7 +103,7 @@ if(location.protocol==="https:"){
 <header class="hero">
   <div class="wrap">
     <h1>Tuberkulose in Hamburg 2017–2025</h1>
-    <p class="lead">Fallzahlen, Alter, Geburtsland, betroffene Organe, Infektiosität, Resistenz und Behandlungsergebnisse im Überblick. Wählen Sie ein Jahr oder klicken Sie in die Diagramme.</p>
+    <p class="lead">Fallzahlen, Alter, betroffene Organe, Infektiosität, Resistenz und Behandlungsergebnisse im Überblick. Wählen Sie ein Jahr oder klicken Sie in die Diagramme.</p>
   </div>
 </header>
 
@@ -159,22 +159,12 @@ if(location.protocol==="https:"){
       <p class="sub">Altersgruppen, alle Fälle 2017–2025 zusammen (Anteil in Prozent).</p>
       <div class="chart" id="c-alter" role="img" aria-label="Verteilung der Fälle nach Altersgruppen"></div>
       <p class="note">Bei 32 der 1.726 Fälle liegt keine Altersangabe vor.</p>
-      <h3 style="margin:18px 0 4px;font-size:16px;color:var(--blue)">Medianalter je Jahr</h3>
-      <div class="chart" id="c-median" role="img" aria-label="Medianalter je Jahr"></div>
     </section>
 
-    <section class="card" aria-labelledby="h-herkunft">
-      <h2 id="h-herkunft"><span class="arrow">▸</span> Geburtsland</h2>
-      <p class="sub">Anteil der in Deutschland und im Ausland geborenen Erkrankten je Jahr.</p>
-      <div class="chart" id="c-de" role="img" aria-label="Anteil in Deutschland und im Ausland Geborener je Jahr"></div>
-      <ul class="legend">
-        <li><span class="sw" style="background:var(--blue)"></span>In Deutschland geboren</li>
-        <li><span class="sw" style="background:var(--blue3)"></span>Im Ausland geboren</li>
-      </ul>
-      <h3 style="margin:18px 0 6px;font-size:16px;color:var(--blue)">Häufige Geburtsländer (Fälle)</h3>
-      <div class="toggles" id="land-toggles"></div>
-      <div class="chart" id="c-land" role="img" aria-label="Fälle nach häufigen Geburtsländern je Jahr"></div>
-      <p class="note">Maßgeblich ist das Geburtsland, nicht die Staatsangehörigkeit. Ein Geburtsland sagt nichts darüber, wo die Ansteckung erfolgt ist.</p>
+    <section class="card" aria-labelledby="h-median">
+      <h2 id="h-median"><span class="arrow">▸</span> Medianalter</h2>
+      <p class="sub">Die Hälfte der Erkrankten ist jünger, die Hälfte älter als dieser Wert.</p>
+      <div class="chart" id="c-median" role="img" aria-label="Medianalter je Jahr"></div>
     </section>
   </div>
 
@@ -244,7 +234,7 @@ if(location.protocol==="https:"){
       <div class="tablewrap">
         <table id="tab">
           <caption class="sub" style="text-align:left;caption-side:top">Kennzahlen je Jahr</caption>
-          <thead><tr><th scope="col">Jahr</th><th scope="col">Fälle</th><th scope="col">Inzidenz Hamburg je 100.000</th><th scope="col">Inzidenz Deutschland je 100.000</th><th scope="col">Medianalter</th><th scope="col">Im Ausland geboren</th><th scope="col">Kinder unter 15</th><th scope="col">MDR/XDR</th></tr></thead>
+          <thead><tr><th scope="col">Jahr</th><th scope="col">Fälle</th><th scope="col">Inzidenz Hamburg je 100.000</th><th scope="col">Inzidenz Deutschland je 100.000</th><th scope="col">Medianalter</th><th scope="col">Kinder unter 15</th><th scope="col">MDR/XDR</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -286,7 +276,6 @@ var Y=[2017,2018,2019,2020,2021,2022,2023,2024,2025];
 var N=[241,179,208,180,152,156,205,213,192];
 var INZ=[13.2,9.7,11.3,9.7,8.2,8.2,11.0,11.4,10.3];
 var MED=[37,32,39,38,35,39,34,35,39];
-var DE=[44,39,45,46,30,22,30,38,38];
 var MDR=[9,2,4,3,4,14,8,3,1];
 var K15=[15,6,11,8,12,5,19,15,9];
 var INZ_DE=[6.7,6.5,5.8,4.7,4.5,4.9,5.3,5.2];
@@ -301,8 +290,6 @@ var ANL=[
 var AGE_L=['0–4','5–14','15–24','25–34','35–44','45–54','55–64','65–74','75+'];
 var AGE_N=[44,54,284,416,292,211,152,116,125];
 var AGE_TOTAL=1726;
-var LAND={'Afghanistan':[16,22,21,13,24,26,28,34,23],'Eritrea':[24,24,18,13,11,8,5,9,5],'Polen':[12,2,12,8,9,10,12,18,23],'Ukraine':[1,1,3,1,2,19,19,11,10],'Indien':[5,6,13,13,13,9,10,9,7]};
-var LAND_COL={'Afghanistan':'#003063','Eritrea':'#e10019','Polen':'#005ca9','Ukraine':'#7fadd4','Indien':'#818181'};
 var BE_Y=[2018,2019,2020,2021,2022,2023,2024];
 var BE=[
   {k:'Erfolg',l:'Behandlung erfolgreich',c:'#003063',v:[79.9,81.2,77.8,84.2,70.5,74.6,76.1]},
@@ -361,13 +348,11 @@ function delta(cur,prev,unit,dec){
   return '<div class="d '+cls+'">'+s+txt+(unit||'')+' zum Vorjahr</div>';
 }
 function renderKpis(){
-  var i=sel,aus=Math.round((N[i]-DE[i])/N[i]*1000)/10;
-  var ausPrev=i>0?Math.round((N[i-1]-DE[i-1])/N[i-1]*1000)/10:undefined;
+  var i=sel;
   var h='';
   h+='<div class="kpi"><div class="v">'+fmt(N[i])+'</div><div class="l">Fälle in '+Y[i]+'</div>'+delta(N[i],N[i-1])+'</div>';
   h+='<div class="kpi"><div class="v">'+fmt1(INZ[i])+'</div><div class="l">Inzidenz je 100.000 Einwohner</div>'+delta(INZ[i],INZ[i-1],'',true)+'</div>';
   h+='<div class="kpi"><div class="v">'+MED[i]+' Jahre</div><div class="l">Medianalter</div>'+delta(MED[i],MED[i-1],' Jahre')+'</div>';
-  h+='<div class="kpi"><div class="v">'+fmt1(aus)+' %</div><div class="l">im Ausland geboren</div>'+delta(aus,ausPrev,' Prozentpunkte',true)+'</div>';
   var kid=Math.round(K15[i]/N[i]*1000)/10,kidPrev=i>0?Math.round(K15[i-1]/N[i-1]*1000)/10:undefined;
   h+='<div class="kpi"><div class="v">'+fmt1(kid)+' %</div><div class="l">Kinder unter 15 Jahren ('+K15[i]+' Fälle)</div>'+delta(kid,kidPrev,' Prozentpunkte',true)+'</div>';
   h+='<div class="kpi"><div class="v">'+fmt(MDR[i])+'</div><div class="l">Fälle mit MDR/XDR</div>'+delta(MDR[i],MDR[i-1])+'</div>';
@@ -424,52 +409,6 @@ function chartMedian(){
     var c=el('circle',{cx:p[0],cy:p[1],r:i===sel?5.5:3.5,fill:i===sel?'#e10019':'#fff',stroke:i===sel?'#e10019':'#003063','stroke-width':2,tabindex:0,'aria-label':Y[i]+': Medianalter '+MED[i]},svg);
     hover(c,'<strong>'+Y[i]+'</strong><br>Medianalter '+MED[i]+' Jahre');
     el('text',{x:p[0],y:h-8,'text-anchor':'middle','class':'ax'},svg,Y[i]);
-  });
-}
-
-/* ---------- Diagramm: Deutschland / Ausland ---------- */
-function chartDe(){
-  var w=480,h=260,m={l:40,r:10,t:10,b:28},svg=frame(document.getElementById('c-de'),w,h);
-  var iw=w-m.l-m.r,ih=h-m.t-m.b,bw=iw/Y.length;
-  yTicks(svg,m,w,h,100,25,function(v){return v+' %'});
-  Y.forEach(function(yr,i){
-    var d=DE[i]/N[i]*100,a=100-d,x=m.l+i*bw+bw*.14,bwid=bw*.72;
-    var hd=ih*d/100,ha=ih*a/100,yBase=m.t+ih;
-    var r1=el('rect',{x:x,y:yBase-hd,width:bwid,height:hd,fill:'#003063',tabindex:0,'aria-label':yr+': '+fmt1(d)+' Prozent in Deutschland geboren'},svg);
-    var r2=el('rect',{x:x,y:yBase-hd-ha,width:bwid,height:ha,fill:'#9dc3e6'},svg);
-    var tt='<strong>'+yr+'</strong><br>In Deutschland geboren: '+fmt1(d)+' % ('+DE[i]+')<br>Im Ausland geboren: '+fmt1(a)+' % ('+(N[i]-DE[i])+')';
-    hover(r1,tt);hover(r2,tt);
-    if(i===sel)el('rect',{x:x-2,y:m.t-2,width:bwid+4,height:ih+4,fill:'none',stroke:'#e10019','stroke-width':2},svg);
-    el('text',{x:x+bwid/2,y:yBase-hd+14,'text-anchor':'middle','font-size':10,fill:'#fff',style:'fill:#fff'},svg,Math.round(d));
-    el('text',{x:x+bwid/2,y:h-10,'text-anchor':'middle','class':'ax'},svg,yr);
-  });
-}
-
-/* ---------- Diagramm: Geburtsländer ---------- */
-var activeLands={'Afghanistan':true,'Eritrea':true,'Polen':true,'Ukraine':true,'Indien':true};
-function landToggles(){
-  var host=document.getElementById('land-toggles');host.innerHTML='';
-  Object.keys(LAND).forEach(function(l){
-    var lab=document.createElement('label'),cb=document.createElement('input');
-    cb.type='checkbox';cb.checked=activeLands[l];
-    cb.addEventListener('change',function(){activeLands[l]=cb.checked;chartLand()});
-    var sw=document.createElement('span');sw.className='sw';sw.style.background=LAND_COL[l];
-    lab.appendChild(cb);lab.appendChild(sw);lab.appendChild(document.createTextNode(l));host.appendChild(lab);
-  });
-}
-function chartLand(){
-  var w=480,h=250,m={l:34,r:12,t:10,b:28},svg=frame(document.getElementById('c-land'),w,h);
-  var max=40,iw=w-m.l-m.r,ih=h-m.t-m.b;
-  yTicks(svg,m,w,h,max,10,null);
-  Y.forEach(function(yr,i){el('text',{x:m.l+iw*(i+.5)/Y.length,y:h-10,'text-anchor':'middle','class':'ax'},svg,yr)});
-  Object.keys(LAND).forEach(function(l){
-    if(!activeLands[l])return;
-    var pts=Y.map(function(yr,i){return [m.l+iw*(i+.5)/Y.length,m.t+ih*(1-LAND[l][i]/max)]});
-    el('polyline',{points:pts.map(function(p){return p.join(',')}).join(' '),fill:'none',stroke:LAND_COL[l],'stroke-width':2.5},svg);
-    pts.forEach(function(p,i){
-      var c=el('circle',{cx:p[0],cy:p[1],r:4,fill:'#fff',stroke:LAND_COL[l],'stroke-width':2,tabindex:0,'aria-label':l+' '+Y[i]+': '+LAND[l][i]+' Fälle'},svg);
-      hover(c,'<strong>'+l+' '+Y[i]+'</strong><br>'+LAND[l][i]+' Fälle');
-    });
   });
 }
 
@@ -657,9 +596,8 @@ function chartInf(){
 function table(){
   var tb=document.querySelector('#tab tbody');tb.innerHTML='';
   Y.forEach(function(yr,i){
-    var aus=Math.round((N[i]-DE[i])/N[i]*1000)/10;
     var tr=document.createElement('tr');
-    tr.innerHTML='<td>'+yr+'</td><td>'+fmt(N[i])+'</td><td>'+fmt1(INZ[i])+'</td><td>'+(i<INZ_DE.length?fmt1(INZ_DE[i]):'–')+'</td><td>'+MED[i]+'</td><td>'+fmt1(aus)+' %</td><td>'+fmt1(Math.round(K15[i]/N[i]*1000)/10)+' %</td><td>'+MDR[i]+'</td>';
+    tr.innerHTML='<td>'+yr+'</td><td>'+fmt(N[i])+'</td><td>'+fmt1(INZ[i])+'</td><td>'+(i<INZ_DE.length?fmt1(INZ_DE[i]):'–')+'</td><td>'+MED[i]+'</td><td>'+fmt1(Math.round(K15[i]/N[i]*1000)/10)+' %</td><td>'+MDR[i]+'</td>';
     tb.appendChild(tr);
   });
   var tb2=document.querySelector('#tab-inf tbody');tb2.innerHTML='';
@@ -672,10 +610,10 @@ function table(){
 }
 
 function select(i){
-  sel=i;renderYears();renderKpis();chartFaelle();chartVgl();chartKinder();chartMedian();chartDe();chartMdr();chartInf();
+  sel=i;renderYears();renderKpis();chartFaelle();chartVgl();chartKinder();chartMedian();chartMdr();chartInf();
 }
 
-renderYears();renderKpis();chartFaelle();chartVgl();chartKinder();chartAlter();chartMedian();chartDe();landToggles();chartLand();orgSwitch();chartOrgan();infKpis();chartInf();chartMdr();chartBe();chartAnlass();table();
+renderYears();renderKpis();chartFaelle();chartVgl();chartKinder();chartAlter();chartMedian();orgSwitch();chartOrgan();infKpis();chartInf();chartMdr();chartBe();chartAnlass();table();
 })();
 </script>
 </body>
