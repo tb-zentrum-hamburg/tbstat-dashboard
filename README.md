@@ -12,3 +12,4 @@
 - v1.2 (03.11.2026): Neue Abschnitte "Betroffenes Organ" (Lunge gegenüber außerhalb der Lunge, Formen der extrapulmonalen Tuberkulose; 2017–2025 und 2025) und "Infektiosität der Lungentuberkulose" (mikroskopisch offen, kulturell offen, geschlossen; 2019–2025) mit Zusatztabelle.
 - v1.3 (03.11.2026): Abschnitt "Geburtsland" (In Deutschland gegenüber im Ausland geboren, häufige Geburtsländer) vollständig entfernt, ebenso die Kennzahl "im Ausland geboren" und die Tabellenspalte. "Alter" und "Medianalter" stehen jetzt als zwei getrennte Karten nebeneinander.
 - v1.4 (04.11.2026): Hinweise zu den Zahlen ergänzt um die Erklärung zu Abweichungen gegenüber den RKI-Zahlen (unterschiedliche Stichtage, RKI-Stichtag 28.02. des Folgejahres). Formulierung zu kleinen Fallzahlen überarbeitet.
+- v1.5 (04.11.2026): Datenstand Juli 2026 in den Hinweisen zu den Zahlen genannt.
